@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html len="en">
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+
+        <title>Mean racers 2</title>
+    </head>
+    <body>
+        
+        <h1>hallo</h1>
+        <script data-main="./" src="tools/require.js"></script>
+        <script src="./phaser.min.js"></script>
+        <script>
+            requirejs.config({
+                baseUrl: './',
+            });
+
+            requirejs(['game']);
+
+            let game = new require('app')();
+            
+        </script>
+
+    </body>
+</html>
