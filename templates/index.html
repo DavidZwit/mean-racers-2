@@ -7,21 +7,34 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
 
         <title>Mean racers 2</title>
-    </head>
-    <body>
         
-        <h1>hallo</h1>
         <script data-main="./" src="tools/require.js"></script>
         <script src="./phaser.min.js"></script>
         <script>
             requirejs.config({
                 baseUrl: './',
+                paths: {
+                    Phaser: './phaser.min.js'
+                }
             });
 
             requirejs(['game']);
 
-            let game = new require('app')();
-            
+        </script>
+    </head>
+
+    <body>
+        
+        <script>
+            require(['game'], function (game) {
+                require(['app'], function (app) {
+
+                    var game = app.Game.getInstance();
+
+                    game.start();
+
+                });
+            });
         </script>
 
     </body>

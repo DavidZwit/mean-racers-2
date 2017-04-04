@@ -20,10 +20,9 @@ module.exports = function(grunt) {
                 declaration: false,
                 noImplicitAny: false,
                 outFile: "_build/dev/game.js"
-            },
-            
+            },            
             dev: {
-                src: ['ts/*.ts'],
+                src: ['ts/*.ts', 'tools/*.ts'],
                 dest: '_build/dev/game.js'
             },
         },
